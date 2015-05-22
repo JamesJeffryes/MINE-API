@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="MacRoman"?><MDocument><MChemicalStruct>
+<reaction>
+	<reactantList><molecule>
+		<atomArray>
+			<atom id="a0" mrvPseudo="R1"></atom>
+			<atom id="a1" elementType="C" mrvExtraLabel="0"></atom>
+			<atom id="a2" elementType="C" mrvExtraLabel="0"></atom>
+			<atom id="a3" elementType="C" mrvExtraLabel="0"></atom>
+			<atom id="a4" elementType="C" mrvExtraLabel="0"></atom>
+			<atom id="a5" elementType="O" mrvExtraLabel="0"></atom>
+			<atom id="a6" elementType="P" mrvExtraLabel="0"></atom>
+			<atom id="a25" mrvPseudo="A"></atom>
+			<atom id="a26" mrvPseudo="A"></atom>
+			<atom id="a7" elementType="O" mrvExtraLabel="0"></atom>
+			<atom id="a8" elementType="P" mrvExtraLabel="0"></atom>
+			<atom id="a29" mrvPseudo="A"></atom>
+			<atom id="a30" mrvPseudo="A"></atom>
+			<atom id="a31" mrvPseudo="A"></atom>
+			<atom id="a9" elementType="C" mrvExtraLabel="0"></atom>
+			<atom id="a10" elementType="C" mrvExtraLabel="0"></atom>
+			<atom id="a11" elementType="C" mrvExtraLabel="0"></atom>
+			<atom id="a12" elementType="C" mrvExtraLabel="0"></atom>
+			<atom id="a13" elementType="C" mrvExtraLabel="0"></atom>
+			<atom id="a14" elementType="O" mrvExtraLabel="0"></atom>
+			<atom id="a15" elementType="P" mrvExtraLabel="0"></atom>
+			<atom id="a39" mrvPseudo="A"></atom>
+			<atom id="a40" mrvPseudo="A"></atom>
+			<atom id="a16" elementType="O" mrvExtraLabel="0"></atom>
+			<atom id="a17" elementType="P" mrvExtraLabel="0"></atom>
+			<atom id="a43" mrvPseudo="A"></atom>
+			<atom id="a44" mrvPseudo="A"></atom>
+			<atom id="a45" mrvPseudo="A"></atom>
+			<atom id="a18" elementType="H"></atom>
+		</atomArray>
+		<bondArray>
+			<bond atomRefs2="a0 a1" order="1"></bond>
+			<bond atomRefs2="a1 a2" order="1"></bond>
+			<bond atomRefs2="a1 a3" order="2"></bond>
+			<bond atomRefs2="a3 a4" order="1"></bond>
+			<bond atomRefs2="a4 a5" order="1"></bond>
+			<bond atomRefs2="a5 a6" order="1"></bond>
+			<bond atomRefs2="a6 a7" order="1"></bond>
+			<bond atomRefs2="a7 a8" order="1"></bond>
+			<bond atomRefs2="a9 a10" order="1"></bond>
+			<bond atomRefs2="a9 a18" order="1"></bond>
+			<bond atomRefs2="a10 a11" order="2"></bond>
+			<bond atomRefs2="a10 a12" order="1"></bond>
+			<bond atomRefs2="a12 a13" order="1"></bond>
+			<bond atomRefs2="a13 a14" order="1"></bond>
+			<bond atomRefs2="a14 a15" order="1"></bond>
+			<bond atomRefs2="a15 a16" order="1"></bond>
+			<bond atomRefs2="a16 a17" order="1"></bond>
+			<bond atomRefs2="a6 a25" order="1"></bond>
+			<bond atomRefs2="a6 a26" order="2"></bond>
+			<bond atomRefs2="a8 a29" order="1"></bond>
+			<bond atomRefs2="a8 a30" order="1"></bond>
+			<bond atomRefs2="a8 a31" order="2"></bond>
+			<bond atomRefs2="a15 a39" order="1"></bond>
+			<bond atomRefs2="a15 a40" order="2"></bond>
+			<bond atomRefs2="a17 a43" order="1"></bond>
+			<bond atomRefs2="a17 a44" order="1"></bond>
+			<bond atomRefs2="a17 a45" order="2"></bond>
+		</bondArray>
+	</molecule></reactantList>
+	<productList><molecule>
+		<atomArray>
+			<atom id="a0" mrvPseudo="R1"></atom>
+			<atom id="a1" elementType="C" mrvExtraLabel="0"></atom>
+			<atom id="a2" elementType="C" mrvExtraLabel="0"></atom>
+			<atom id="a3" elementType="C" mrvExtraLabel="0"></atom>
+			<atom id="a4" elementType="C" mrvExtraLabel="0"></atom>
+			<atom id="a5" elementType="O" mrvExtraLabel="0"></atom>
+			<atom id="a6" elementType="P" mrvExtraLabel="0"></atom>
+			<atom id="a25" mrvPseudo="A"></atom>
+			<atom id="a26" mrvPseudo="A"></atom>
+			<atom id="a7" elementType="O" mrvExtraLabel="0"></atom>
+			<atom id="a8" elementType="P" mrvExtraLabel="0"></atom>
+			<atom id="a29" mrvPseudo="A"></atom>
+			<atom id="a30" mrvPseudo="A"></atom>
+			<atom id="a31" mrvPseudo="A"></atom>
+			<atom id="a9" elementType="C" mrvExtraLabel="0"></atom>
+			<atom id="a10" elementType="C" mrvExtraLabel="0"></atom>
+			<atom id="a11" elementType="C" mrvExtraLabel="0"></atom>
+			<atom id="a12" elementType="C" mrvExtraLabel="0"></atom>
+			<atom id="a13" elementType="C" mrvExtraLabel="0"></atom>
+			<atom id="a14" elementType="O" mrvExtraLabel="0"></atom>
+			<atom id="a15" elementType="P" mrvExtraLabel="0"></atom>
+			<atom id="a39" mrvPseudo="A"></atom>
+			<atom id="a40" mrvPseudo="A"></atom>
+			<atom id="a16" elementType="O" mrvExtraLabel="0"></atom>
+			<atom id="a17" elementType="P" mrvExtraLabel="0"></atom>
+			<atom id="a43" mrvPseudo="A"></atom>
+			<atom id="a44" mrvPseudo="A"></atom>
+			<atom id="a45" mrvPseudo="A"></atom>
+			<atom id="a18" elementType="H"></atom>
+		</atomArray>
+		<bondArray>
+			<bond atomRefs2="a0 a1" order="1"></bond>
+			<bond atomRefs2="a1 a2" order="1"></bond>
+			<bond atomRefs2="a1 a3" order="2"></bond>
+			<bond atomRefs2="a3 a4" order="1"></bond>
+			<bond atomRefs2="a4 a9" order="1"></bond>
+			<bond atomRefs2="a5 a6" order="1"></bond>
+			<bond atomRefs2="a5 a18" order="1"></bond>
+			<bond atomRefs2="a6 a7" order="1"></bond>
+			<bond atomRefs2="a7 a8" order="1"></bond>
+			<bond atomRefs2="a9 a10" order="1"></bond>
+			<bond atomRefs2="a10 a11" order="1"></bond>
+			<bond atomRefs2="a10 a12" order="2"></bond>
+			<bond atomRefs2="a12 a13" order="1"></bond>
+			<bond atomRefs2="a13 a14" order="1"></bond>
+			<bond atomRefs2="a14 a15" order="1"></bond>
+			<bond atomRefs2="a15 a16" order="1"></bond>
+			<bond atomRefs2="a16 a17" order="1"></bond>
+			<bond atomRefs2="a6 a25" order="1"></bond>
+			<bond atomRefs2="a6 a26" order="2"></bond>
+			<bond atomRefs2="a8 a29" order="1"></bond>
+			<bond atomRefs2="a8 a30" order="1"></bond>
+			<bond atomRefs2="a8 a31" order="2"></bond>
+			<bond atomRefs2="a15 a39" order="1"></bond>
+			<bond atomRefs2="a15 a40" order="2"></bond>
+			<bond atomRefs2="a17 a43" order="1"></bond>
+			<bond atomRefs2="a17 a44" order="1"></bond>
+			<bond atomRefs2="a17 a45" order="2"></bond>
+		</bondArray>
+	</molecule></productList>
+</reaction>
+</MChemicalStruct><MTextBox toption="NOROT" fontScale="12.0" halign="LEFT" valign="BOTTOM" autoSize="false"><Field name="text"><![CDATA[R1: --CH2 0    -CH3 0
+]]></Field><MPoint x="-5.0" y="0.0"></MPoint><MPoint x="10.0" y="0.0"></MPoint><MPoint x="10.0" y="-10.0"></MPoint><MPoint x="-5.0" y="-10.0"></MPoint></MTextBox></MDocument>
