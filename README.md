@@ -8,6 +8,7 @@ The following databases are featured on the MINE website:
 * KEGG - “KEGGexp2”
 
 An example in Python accessing the API.
+
 	>>> from Client import mineDatabaseServices
 	>>> service = mineDatabaseServices("http://bio-data-1.mcs.anl.gov/services/mine-database")
 	>>> service.quick_search("EcoCycexp2","ATP")
