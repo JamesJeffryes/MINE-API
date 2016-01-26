@@ -41,44 +41,44 @@ function mineDatabaseServices(url, auth, auth_cb) {
         return json_call_ajax("mineDatabaseServices.quick_search", [db, query], 1, _callback, _error_callback);
     };
 
-    this.similarity_search = function (db, comp_structure, min_tc, fp_type, limit, _callback, _errorCallback) {
+    this.similarity_search = function (db, comp_structure, min_tc, fp_type, limit, parent_filter, reaction_filter, _callback, _errorCallback) {
     return json_call_ajax("mineDatabaseServices.similarity_search",
-        [db, comp_structure, min_tc, fp_type, limit], 1, _callback, _errorCallback);
+        [db, comp_structure, min_tc, fp_type, limit, parent_filter, reaction_filter], 1, _callback, _errorCallback);
 };
 
-    this.similarity_search_async = function (db, comp_structure, min_tc, fp_type, limit, _callback, _error_callback) {
+    this.similarity_search_async = function (db, comp_structure, min_tc, fp_type, limit, parent_filter, reaction_filter, _callback, _error_callback) {
         deprecationWarning();
-        return json_call_ajax("mineDatabaseServices.similarity_search", [db, comp_structure, min_tc, fp_type, limit], 1, _callback, _error_callback);
+        return json_call_ajax("mineDatabaseServices.similarity_search", [db, comp_structure, min_tc, fp_type, limit, parent_filter, reaction_filter], 1, _callback, _error_callback);
     };
 
-    this.structure_search = function (db, input_format, comp_structure, _callback, _errorCallback) {
+    this.structure_search = function (db, input_format, comp_structure, parent_filter, reaction_filter, _callback, _errorCallback) {
     return json_call_ajax("mineDatabaseServices.structure_search",
-        [db, input_format, comp_structure], 1, _callback, _errorCallback);
+        [db, input_format, comp_structure, parent_filter, reaction_filter], 1, _callback, _errorCallback);
 };
 
-    this.structure_search_async = function (db, input_format, comp_structure, _callback, _error_callback) {
+    this.structure_search_async = function (db, input_format, comp_structure, parent_filter, reaction_filter, _callback, _error_callback) {
         deprecationWarning();
-        return json_call_ajax("mineDatabaseServices.structure_search", [db, input_format, comp_structure], 1, _callback, _error_callback);
+        return json_call_ajax("mineDatabaseServices.structure_search", [db, input_format, comp_structure, parent_filter, reaction_filter], 1, _callback, _error_callback);
     };
 
-    this.substructure_search = function (db, substructure, limit, _callback, _errorCallback) {
+    this.substructure_search = function (db, substructure, limit, parent_filter, reaction_filter, _callback, _errorCallback) {
     return json_call_ajax("mineDatabaseServices.substructure_search",
-        [db, substructure, limit], 1, _callback, _errorCallback);
+        [db, substructure, limit, parent_filter, reaction_filter], 1, _callback, _errorCallback);
 };
 
-    this.substructure_search_async = function (db, substructure, limit, _callback, _error_callback) {
+    this.substructure_search_async = function (db, substructure, limit, parent_filter, reaction_filter, _callback, _error_callback) {
         deprecationWarning();
-        return json_call_ajax("mineDatabaseServices.substructure_search", [db, substructure, limit], 1, _callback, _error_callback);
+        return json_call_ajax("mineDatabaseServices.substructure_search", [db, substructure, limit, parent_filter, reaction_filter], 1, _callback, _error_callback);
     };
 
-    this.database_query = function (db, mongo_query, _callback, _errorCallback) {
+    this.database_query = function (db, mongo_query, parent_filter, reaction_filter, _callback, _errorCallback) {
     return json_call_ajax("mineDatabaseServices.database_query",
-        [db, mongo_query], 1, _callback, _errorCallback);
+        [db, mongo_query, parent_filter, reaction_filter], 1, _callback, _errorCallback);
 };
 
-    this.database_query_async = function (db, mongo_query, _callback, _error_callback) {
+    this.database_query_async = function (db, mongo_query, parent_filter, reaction_filter, _callback, _error_callback) {
         deprecationWarning();
-        return json_call_ajax("mineDatabaseServices.database_query", [db, mongo_query], 1, _callback, _error_callback);
+        return json_call_ajax("mineDatabaseServices.database_query", [db, mongo_query, parent_filter, reaction_filter], 1, _callback, _error_callback);
     };
 
     this.get_comps = function (db, ids, _callback, _errorCallback) {
@@ -111,16 +111,6 @@ function mineDatabaseServices(url, auth, auth_cb) {
         return json_call_ajax("mineDatabaseServices.get_ops", [db, operator_names], 1, _callback, _error_callback);
     };
 
-    this.get_models = function (_callback, _errorCallback) {
-    return json_call_ajax("mineDatabaseServices.get_models",
-        [], 1, _callback, _errorCallback);
-};
-
-    this.get_models_async = function (_callback, _error_callback) {
-        deprecationWarning();
-        return json_call_ajax("mineDatabaseServices.get_models", [], 1, _callback, _error_callback);
-    };
-
     this.get_adducts = function (_callback, _errorCallback) {
     return json_call_ajax("mineDatabaseServices.get_adducts",
         [], 1, _callback, _errorCallback);
@@ -141,14 +131,14 @@ function mineDatabaseServices(url, auth, auth_cb) {
         return json_call_ajax("mineDatabaseServices.ms_adduct_search", [text, text_type, ms_params], 1, _callback, _error_callback);
     };
 
-    this.mz_search = function (text, text_type, mz_params, _callback, _errorCallback) {
-    return json_call_ajax("mineDatabaseServices.mz_search",
-        [text, text_type, mz_params], 1, _callback, _errorCallback);
+    this.ms2_search = function (text, text_type, ms_params, _callback, _errorCallback) {
+    return json_call_ajax("mineDatabaseServices.ms2_search",
+        [text, text_type, ms_params], 1, _callback, _errorCallback);
 };
 
-    this.mz_search_async = function (text, text_type, mz_params, _callback, _error_callback) {
+    this.ms2_search_async = function (text, text_type, ms_params, _callback, _error_callback) {
         deprecationWarning();
-        return json_call_ajax("mineDatabaseServices.mz_search", [text, text_type, mz_params], 1, _callback, _error_callback);
+        return json_call_ajax("mineDatabaseServices.ms2_search", [text, text_type, ms_params], 1, _callback, _error_callback);
     };
 
     this.pathway_search = function (db, start_comp, end_comp, len_limit, all_paths, _callback, _errorCallback) {
