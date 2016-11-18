@@ -81,6 +81,16 @@ function mineDatabaseServices(url, auth, auth_cb) {
         return json_call_ajax("mineDatabaseServices.database_query", [db, mongo_query, parent_filter, reaction_filter], 1, _callback, _error_callback);
     };
 
+    this.get_ids = function (db, collection, query, _callback, _errorCallback) {
+    return json_call_ajax("mineDatabaseServices.get_ids",
+        [db, collection, query], 1, _callback, _errorCallback);
+};
+
+    this.get_ids_async = function (db, collection, query, _callback, _error_callback) {
+        deprecationWarning();
+        return json_call_ajax("mineDatabaseServices.get_ids", [db, collection, query], 1, _callback, _error_callback);
+    };
+
     this.get_comps = function (db, ids, _callback, _errorCallback) {
     return json_call_ajax("mineDatabaseServices.get_comps",
         [db, ids], 1, _callback, _errorCallback);
@@ -109,6 +119,16 @@ function mineDatabaseServices(url, auth, auth_cb) {
     this.get_ops_async = function (db, operator_names, _callback, _error_callback) {
         deprecationWarning();
         return json_call_ajax("mineDatabaseServices.get_ops", [db, operator_names], 1, _callback, _error_callback);
+    };
+
+    this.get_operator = function (db, operator_name, _callback, _errorCallback) {
+    return json_call_ajax("mineDatabaseServices.get_operator",
+        [db, operator_name], 1, _callback, _errorCallback);
+};
+
+    this.get_operator_async = function (db, operator_name, _callback, _error_callback) {
+        deprecationWarning();
+        return json_call_ajax("mineDatabaseServices.get_operator", [db, operator_name], 1, _callback, _error_callback);
     };
 
     this.get_adducts = function (_callback, _errorCallback) {

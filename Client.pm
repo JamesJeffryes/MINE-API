@@ -707,6 +707,99 @@ sub database_query
 
 
 
+=head2 get_ids
+
+  $ids = $obj->get_ids($db, $collection, $query)
+
+=over 4
+
+=item Parameter and return types
+
+=begin html
+
+<pre>
+$db is a string
+$collection is a string
+$query is a string
+$ids is a reference to a list where each element is an object_id
+object_id is a string
+
+</pre>
+
+=end html
+
+=begin text
+
+$db is a string
+$collection is a string
+$query is a string
+$ids is a reference to a list where each element is an object_id
+object_id is a string
+
+
+=end text
+
+=item Description
+
+Return a list of object_ids in a specified collection in a specified db
+Input parameters for the "get_ids" function:
+string db - the database from which to retrieve ids
+string collection - the collection from which to retrieve ids
+        mongo_query query - A valid mongo query as a string
+
+=back
+
+=cut
+
+sub get_ids
+{
+    my($self, @args) = @_;
+
+# Authentication: none
+
+    if ((my $n = @args) != 3)
+    {
+	Bio::KBase::Exceptions::ArgumentValidationError->throw(error =>
+							       "Invalid argument count for function get_ids (received $n, expecting 3)");
+    }
+    {
+	my($db, $collection, $query) = @args;
+
+	my @_bad_arguments;
+        (!ref($db)) or push(@_bad_arguments, "Invalid type for argument 1 \"db\" (value was \"$db\")");
+        (!ref($collection)) or push(@_bad_arguments, "Invalid type for argument 2 \"collection\" (value was \"$collection\")");
+        (!ref($query)) or push(@_bad_arguments, "Invalid type for argument 3 \"query\" (value was \"$query\")");
+        if (@_bad_arguments) {
+	    my $msg = "Invalid arguments passed to get_ids:\n" . join("", map { "\t$_\n" } @_bad_arguments);
+	    Bio::KBase::Exceptions::ArgumentValidationError->throw(error => $msg,
+								   method_name => 'get_ids');
+	}
+    }
+
+    my $result = $self->{client}->call($self->{url}, $self->{headers}, {
+	method => "mineDatabaseServices.get_ids",
+	params => \@args,
+    });
+    if ($result) {
+	if ($result->is_error) {
+	    Bio::KBase::Exceptions::JSONRPC->throw(error => $result->error_message,
+					       code => $result->content->{error}->{code},
+					       method_name => 'get_ids',
+					       data => $result->content->{error}->{error} # JSON::RPC::ReturnObject only supports JSONRPC 1.1 or 1.O
+					      );
+	} else {
+	    return wantarray ? @{$result->result} : $result->result->[0];
+	}
+    } else {
+        Bio::KBase::Exceptions::HTTP->throw(error => "Error invoking method get_ids",
+					    status_line => $self->{client}->status_line,
+					    method_name => 'get_ids',
+				       );
+    }
+}
+
+
+
 =head2 get_comps
 
   $objects = $obj->get_comps($db, $ids)
@@ -1007,6 +1100,100 @@ sub get_ops
         Bio::KBase::Exceptions::HTTP->throw(error => "Error invoking method get_ops",
 					    status_line => $self->{client}->status_line,
 					    method_name => 'get_ops',
+				       );
+    }
+}
+
+
+
+=head2 get_operator
+
+  $operator = $obj->get_operator($db, $operator_name)
+
+=over 4
+
+=item Parameter and return types
+
+=begin html
+
+<pre>
+$db is a string
+$operator_name is a string
+$operator is an OperatorObject
+OperatorObject is a reference to a hash where the following keys are defined:
+	Name has a value which is a string
+	Reactions_predicted has a value which is an int
+	Reaction_ids has a value which is a reference to a list where each element is an object_id
+object_id is a string
+
+</pre>
+
+=end html
+
+=begin text
+
+$db is a string
+$operator_name is a string
+$operator is an OperatorObject
+OperatorObject is a reference to a hash where the following keys are defined:
+	Name has a value which is a string
+	Reactions_predicted has a value which is an int
+	Reaction_ids has a value which is a reference to a list where each element is an object_id
+object_id is a string
+
+
+=end text
+
+=item Description
+
+Returns a OperatorObject with it's reaction IDs that matches supplied operator_name in a specified db
+
+=back
+
+=cut
+
+sub get_operator
+{
+    my($self, @args) = @_;
+
+# Authentication: none
+
+    if ((my $n = @args) != 2)
+    {
+	Bio::KBase::Exceptions::ArgumentValidationError->throw(error =>
+							       "Invalid argument count for function get_operator (received $n, expecting 2)");
+    }
+    {
+	my($db, $operator_name) = @args;
+
+	my @_bad_arguments;
+        (!ref($db)) or push(@_bad_arguments, "Invalid type for argument 1 \"db\" (value was \"$db\")");
+        (!ref($operator_name)) or push(@_bad_arguments, "Invalid type for argument 2 \"operator_name\" (value was \"$operator_name\")");
+        if (@_bad_arguments) {
+	    my $msg = "Invalid arguments passed to get_operator:\n" . join("", map { "\t$_\n" } @_bad_arguments);
+	    Bio::KBase::Exceptions::ArgumentValidationError->throw(error => $msg,
+								   method_name => 'get_operator');
+	}
+    }
+
+    my $result = $self->{client}->call($self->{url}, $self->{headers}, {
+	method => "mineDatabaseServices.get_operator",
+	params => \@args,
+    });
+    if ($result) {
+	if ($result->is_error) {
+	    Bio::KBase::Exceptions::JSONRPC->throw(error => $result->error_message,
+					       code => $result->content->{error}->{code},
+					       method_name => 'get_operator',
+					       data => $result->content->{error}->{error} # JSON::RPC::ReturnObject only supports JSONRPC 1.1 or 1.O
+					      );
+	} else {
+	    return wantarray ? @{$result->result} : $result->result->[0];
+	}
+    } else {
+        Bio::KBase::Exceptions::HTTP->throw(error => "Error invoking method get_operator",
+					    status_line => $self->{client}->status_line,
+					    method_name => 'get_operator',
 				       );
     }
 }

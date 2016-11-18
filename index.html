@@ -4,95 +4,108 @@
 <head>
 <title>mine_database</title>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<link rev="made" href="mailto:olson@ash.mcs.anl.gov" />
+<link rev="made" href="mailto:root@localhost" />
 </head>
 
 <body style="background-color: white">
 
 
+<!-- INDEX BEGIN -->
+<div name="index">
+<p><a name="__index__"></a></p>
 
-<ul id="index">
-  <li><a href="#NAME">NAME</a></li>
-  <li><a href="#DESCRIPTION">DESCRIPTION</a></li>
-  <li><a href="#mineDatabaseServices">mineDatabaseServices</a>
-    <ul>
-      <li><a href="#SYNOPSIS">SYNOPSIS</a></li>
-      <li><a href="#model_search">model_search</a></li>
-      <li><a href="#quick_search">quick_search</a></li>
-      <li><a href="#similarity_search">similarity_search</a></li>
-      <li><a href="#structure_search">structure_search</a></li>
-      <li><a href="#substructure_search">substructure_search</a></li>
-      <li><a href="#database_query">database_query</a></li>
-      <li><a href="#get_comps">get_comps</a></li>
-      <li><a href="#get_rxns">get_rxns</a></li>
-      <li><a href="#get_ops">get_ops</a></li>
-      <li><a href="#get_adducts">get_adducts</a></li>
-      <li><a href="#ms_adduct_search">ms_adduct_search</a></li>
-    </ul>
-  </li>
-  <li><a href="#TYPES">TYPES</a>
-    <ul>
-      <li><a href="#bool">bool</a></li>
-      <li><a href="#object_id">object_id</a></li>
-      <li><a href="#comp_stub">comp_stub</a></li>
-      <li><a href="#rxn_comp">rxn_comp</a></li>
-      <li><a href="#adduct_result">adduct_result</a></li>
-      <li><a href="#peak">peak</a></li>
-      <li><a href="#ms_hit">ms_hit</a></li>
-      <li><a href="#CompoundObject">CompoundObject</a></li>
-      <li><a href="#ReactionObject">ReactionObject</a></li>
-      <li><a href="#OperatorObject">OperatorObject</a></li>
-      <li><a href="#mzParams">mzParams</a></li>
-    </ul>
-  </li>
+<ul>
+
+	<li><a href="#name">NAME</a></li>
+	<li><a href="#description">DESCRIPTION</a></li>
+	<li><a href="#minedatabaseservices">mineDatabaseServices</a></li>
+	<ul>
+
+		<li><a href="#synopsis">SYNOPSIS</a></li>
+		<li><a href="#model_search">model_search</a></li>
+		<li><a href="#quick_search">quick_search</a></li>
+		<li><a href="#similarity_search">similarity_search</a></li>
+		<li><a href="#structure_search">structure_search</a></li>
+		<li><a href="#substructure_search">substructure_search</a></li>
+		<li><a href="#database_query">database_query</a></li>
+		<li><a href="#get_ids">get_ids</a></li>
+		<li><a href="#get_comps">get_comps</a></li>
+		<li><a href="#get_rxns">get_rxns</a></li>
+		<li><a href="#get_ops">get_ops</a></li>
+		<li><a href="#get_operator">get_operator</a></li>
+		<li><a href="#get_adducts">get_adducts</a></li>
+		<li><a href="#ms_adduct_search">ms_adduct_search</a></li>
+		<li><a href="#ms2_search">ms2_search</a></li>
+		<li><a href="#pathway_search">pathway_search</a></li>
+	</ul>
+
+	<li><a href="#types">TYPES</a></li>
+	<ul>
+
+		<li><a href="#bool">bool</a></li>
+		<li><a href="#object_id">object_id</a></li>
+		<li><a href="#comp_stub">comp_stub</a></li>
+		<li><a href="#rxn_comp">rxn_comp</a></li>
+		<li><a href="#pathway">pathway</a></li>
+		<li><a href="#adduct_result">adduct_result</a></li>
+		<li><a href="#peak">peak</a></li>
+		<li><a href="#ms_hit">ms_hit</a></li>
+		<li><a href="#compoundobject">CompoundObject</a></li>
+		<li><a href="#reactionobject">ReactionObject</a></li>
+		<li><a href="#operatorobject">OperatorObject</a></li>
+		<li><a href="#mzparams">mzParams</a></li>
+		<li><a href="#ms2params">ms2Params</a></li>
+	</ul>
+
 </ul>
 
-<h1 id="NAME">NAME</h1>
+<hr name="index" />
+</div>
+<!-- INDEX END -->
 
+<p>
+</p>
+<h1><a name="name">NAME</a></h1>
 <p>Bio::KBase::mine_database::Client</p>
-
-<h1 id="DESCRIPTION">DESCRIPTION</h1>
-
-<h1 id="mineDatabaseServices">mineDatabaseServices</h1>
-
-<h2 id="SYNOPSIS">SYNOPSIS</h2>
-
-<p>The MINE database is fundamentally composed of two different types of documents, which are represented by the Compound and Reaction objects. Users can use text-matching queries to access these records directly or perform two types of more advanced queries: Mass Adduct queries and pathway queries. Mass Adduct queries return a list of compounds that might match the m/z of an unknown compound. Pathway queries return either the shortest path or all paths between two compounds in the database.</p>
-
-<h2 id="model_search">model_search</h2>
-
-<pre><code>  $models = $obj-&gt;model_search($query)</code></pre>
-
+<p>
+</p>
+<hr />
+<h1><a name="description">DESCRIPTION</a></h1>
+<p>
+</p>
+<hr />
+<h1><a name="minedatabaseservices">mineDatabaseServices</a></h1>
+<p>
+</p>
+<h2><a name="synopsis">SYNOPSIS</a></h2>
+<p>The MINE database is fundamentally composed of two different types of documents, which are represented by the Compound
+and Reaction objects. Users can use text-matching queries to access these records directly or perform two types of more
+advanced queries: Mass Adduct queries and pathway queries. Mass Adduct queries return a list of compounds that might
+match the m/z of an unknown compound. Pathway queries return either the shortest path or all paths between two compounds
+ in the database.</p>
+<p>
+</p>
+<h2><a name="model_search">model_search</a></h2>
+<pre>
+  $models = $obj-&gt;model_search($query)</pre>
 <dl>
-
-<dt id="Parameter-and-return-types">Parameter and return types</dt>
-<dd>
-
-
+<dt><strong><a name="parameter_and_return_types" class="item">Parameter and return types</a></strong></dt>
 
 <pre>
 $query is a string
-$models is a reference to a list where each element is a string</pre>
+$models is a reference to a list where each element is a string</pre><dt><strong><a name="description" class="item">Description</a></strong></dt>
 
-</dd>
-<dt id="Description">Description</dt>
 <dd>
-
 <p>Returns a list of metabolic models that match the entered string</p>
-
 </dd>
 </dl>
-
-<h2 id="quick_search">quick_search</h2>
-
-<pre><code>  $quick_search_results = $obj-&gt;quick_search($db, $query)</code></pre>
-
+<p>
+</p>
+<h2><a name="quick_search">quick_search</a></h2>
+<pre>
+  $quick_search_results = $obj-&gt;quick_search($db, $query)</pre>
 <dl>
-
-<dt id="Parameter-and-return-types1">Parameter and return types</dt>
-<dd>
-
-
+<dt><strong><a name="parameter_and_return_types2" class="item">Parameter and return types</a></strong></dt>
 
 <pre>
 $db is a string
@@ -103,27 +116,20 @@ comp_stub is a reference to a hash where the following keys are defined:
 	MINE_id has a value which is a string
 	Names has a value which is a reference to a list where each element is a string
 	Formula has a value which is a string
-object_id is a string</pre>
+object_id is a string</pre><dt><strong><a name="description2" class="item">Description</a></strong></dt>
 
-</dd>
-<dt id="Description1">Description</dt>
 <dd>
-
-<p>Creates quick_search_results, a list of comp_stubs which match the query string. Searches for matches to KEGG Codes, Inchi Keys, Brenda IDs and Names.</p>
-
+<p>Creates quick_search_results, a list of comp_stubs which match the query string. Searches for matches to KEGG
+Codes, Inchi Keys, Brenda IDs and Names.</p>
 </dd>
 </dl>
-
-<h2 id="similarity_search">similarity_search</h2>
-
-<pre><code>  $similarity_search_results = $obj-&gt;similarity_search($db, $comp_structure, $min_tc, $fp_type, $limit, $parent_filter, $reaction_filter)</code></pre>
-
+<p>
+</p>
+<h2><a name="similarity_search">similarity_search</a></h2>
+<pre>
+  $similarity_search_results = $obj-&gt;similarity_search($db, $comp_structure, $min_tc, $fp_type, $limit, $parent_filter, $reaction_filter)</pre>
 <dl>
-
-<dt id="Parameter-and-return-types2">Parameter and return types</dt>
-<dd>
-
-
+<dt><strong><a name="parameter_and_return_types3" class="item">Parameter and return types</a></strong></dt>
 
 <pre>
 $db is a string
@@ -139,27 +145,22 @@ comp_stub is a reference to a hash where the following keys are defined:
 	MINE_id has a value which is a string
 	Names has a value which is a reference to a list where each element is a string
 	Formula has a value which is a string
-object_id is a string</pre>
+object_id is a string</pre><dt><strong><a name="description3" class="item">Description</a></strong></dt>
 
-</dd>
-<dt id="Description2">Description</dt>
 <dd>
-
-<p>Creates similarity_search_results, a list of comp_stubs shorter than the limit whose Tannimoto coefficient to the comp_structure (as SMILES or molfile) is greater that the user set threshold. Uses open babel FP2 or FP4 fingerprints to perform the Tannimoto calculation. BETA[Also accepts a metabolic model with which to filter acceptable source compounds or reaction types.]</p>
-
+<p>Creates similarity_search_results, a list of comp_stubs shorter than the limit whose Tannimoto coefficient to
+the comp_structure (as SMILES or molfile) is greater that the user set threshold. Uses open babel FP2 or FP4
+fingerprints to perform the Tannimoto calculation. Also accepts a metabolic model with which to filter acceptable
+source compounds or reaction types.</p>
 </dd>
 </dl>
-
-<h2 id="structure_search">structure_search</h2>
-
-<pre><code>  $structure_search_results = $obj-&gt;structure_search($db, $input_format, $comp_structure, $parent_filter, $reaction_filter)</code></pre>
-
+<p>
+</p>
+<h2><a name="structure_search">structure_search</a></h2>
+<pre>
+  $structure_search_results = $obj-&gt;structure_search($db, $input_format, $comp_structure, $parent_filter, $reaction_filter)</pre>
 <dl>
-
-<dt id="Parameter-and-return-types3">Parameter and return types</dt>
-<dd>
-
-
+<dt><strong><a name="parameter_and_return_types4" class="item">Parameter and return types</a></strong></dt>
 
 <pre>
 $db is a string
@@ -173,27 +174,21 @@ comp_stub is a reference to a hash where the following keys are defined:
 	MINE_id has a value which is a string
 	Names has a value which is a reference to a list where each element is a string
 	Formula has a value which is a string
-object_id is a string</pre>
+object_id is a string</pre><dt><strong><a name="description4" class="item">Description</a></strong></dt>
 
-</dd>
-<dt id="Description3">Description</dt>
 <dd>
-
-<p>Creates structure_search_result, a list of comp_stubs in the specified database that matches the the supplied comp_structure. The input_format may be any format recognised by OpenBabel (i.e. mol, smi, inchi). BETA[Also accepts a metabolic model with which to filter acceptable source compounds or reaction types.]</p>
-
+<p>Creates structure_search_result, a list of comp_stubs in the specified database that matches the the supplied
+comp_structure. The input_format may be any format recognised by OpenBabel (i.e. mol, smi, inchi). Also accepts
+a metabolic model with which to filter acceptable source compounds or reaction types.</p>
 </dd>
 </dl>
-
-<h2 id="substructure_search">substructure_search</h2>
-
-<pre><code>  $substructure_search_results = $obj-&gt;substructure_search($db, $substructure, $limit, $parent_filter, $reaction_filter)</code></pre>
-
+<p>
+</p>
+<h2><a name="substructure_search">substructure_search</a></h2>
+<pre>
+  $substructure_search_results = $obj-&gt;substructure_search($db, $substructure, $limit, $parent_filter, $reaction_filter)</pre>
 <dl>
-
-<dt id="Parameter-and-return-types4">Parameter and return types</dt>
-<dd>
-
-
+<dt><strong><a name="parameter_and_return_types5" class="item">Parameter and return types</a></strong></dt>
 
 <pre>
 $db is a string
@@ -207,27 +202,20 @@ comp_stub is a reference to a hash where the following keys are defined:
 	MINE_id has a value which is a string
 	Names has a value which is a reference to a list where each element is a string
 	Formula has a value which is a string
-object_id is a string</pre>
+object_id is a string</pre><dt><strong><a name="description5" class="item">Description</a></strong></dt>
 
-</dd>
-<dt id="Description4">Description</dt>
 <dd>
-
-<p>Creates substructure_search_results, a list of comp_stubs under the limit who contain the specified substructure (as SMILES or molfile) BETA[Also accepts a metabolic model with which to filter acceptable source compounds or reaction types.]</p>
-
+<p>Creates substructure_search_results, a list of comp_stubs under the limit who contain the specified substructure
+(as SMILES or molfile) Also accepts a metabolic model with which to filter acceptable source compounds or reaction types.</p>
 </dd>
 </dl>
-
-<h2 id="database_query">database_query</h2>
-
-<pre><code>  $database_query_results = $obj-&gt;database_query($db, $mongo_query, $parent_filter, $reaction_filter)</code></pre>
-
+<p>
+</p>
+<h2><a name="database_query">database_query</a></h2>
+<pre>
+  $database_query_results = $obj-&gt;database_query($db, $mongo_query, $parent_filter, $reaction_filter)</pre>
 <dl>
-
-<dt id="Parameter-and-return-types5">Parameter and return types</dt>
-<dd>
-
-
+<dt><strong><a name="parameter_and_return_types6" class="item">Parameter and return types</a></strong></dt>
 
 <pre>
 $db is a string
@@ -240,27 +228,48 @@ comp_stub is a reference to a hash where the following keys are defined:
 	MINE_id has a value which is a string
 	Names has a value which is a reference to a list where each element is a string
 	Formula has a value which is a string
-object_id is a string</pre>
+object_id is a string</pre><dt><strong><a name="description6" class="item">Description</a></strong></dt>
 
-</dd>
-<dt id="Description5">Description</dt>
 <dd>
-
-<p>A general function which uses mongo&#39;s find to create database_query_results, a list of object_ids which match the specified json query Input parameters for the &quot;database_query&quot; function: string db - the database against which the query will be performed mongo_query query - A valid mongo query as a string string parent_filter - require all results originate from compounds in this specified metabolic model string reaction_filter - require all results originate from operators which map to reactions in this specified metabolic model</p>
-
+<p>A general function which uses mongo's find to create database_query_results, a list of object_ids which match
+the specified json query
+Input parameters for the &quot;database_query&quot; function:
+string db - the database against which the query will be performed
+mongo_query query - A valid mongo query as a string
+string parent_filter - require all results originate from compounds in this specified metabolic model
+string reaction_filter - require all results originate from operators which map to reactions in this specified metabolic model</p>
 </dd>
 </dl>
-
-<h2 id="get_comps">get_comps</h2>
-
-<pre><code>  $objects = $obj-&gt;get_comps($db, $ids)</code></pre>
-
+<p>
+</p>
+<h2><a name="get_ids">get_ids</a></h2>
+<pre>
+  $ids = $obj-&gt;get_ids($db, $collection, $query)</pre>
 <dl>
+<dt><strong><a name="parameter_and_return_types7" class="item">Parameter and return types</a></strong></dt>
 
-<dt id="Parameter-and-return-types6">Parameter and return types</dt>
+<pre>
+$db is a string
+$collection is a string
+$query is a string
+$ids is a reference to a list where each element is an object_id
+object_id is a string</pre><dt><strong><a name="description7" class="item">Description</a></strong></dt>
+
 <dd>
-
-
+<p>Return a list of object_ids in a specified collection in a specified db
+Input parameters for the &quot;get_ids&quot; function:
+string db - the database from which to retrieve ids
+string collection - the collection from which to retrieve ids
+        mongo_query query - A valid mongo query as a string</p>
+</dd>
+</dl>
+<p>
+</p>
+<h2><a name="get_comps">get_comps</a></h2>
+<pre>
+  $objects = $obj-&gt;get_comps($db, $ids)</pre>
+<dl>
+<dt><strong><a name="parameter_and_return_types8" class="item">Parameter and return types</a></strong></dt>
 
 <pre>
 $db is a string
@@ -276,27 +285,19 @@ CompoundObject is a reference to a hash where the following keys are defined:
 	Charge has a value which is an int
 	DB_links has a value which is a reference to a list where each element is a string
 	Reactant_in has a value which is a reference to a list where each element is an object_id
-	Product_of has a value which is a reference to a list where each element is an object_id</pre>
+	Product_of has a value which is a reference to a list where each element is an object_id</pre><dt><strong><a name="description8" class="item">Description</a></strong></dt>
 
-</dd>
-<dt id="Description6">Description</dt>
 <dd>
-
 <p>Return a list of CompoundObjects that match supplied object_ids in a specified db</p>
-
 </dd>
 </dl>
-
-<h2 id="get_rxns">get_rxns</h2>
-
-<pre><code>  $objects = $obj-&gt;get_rxns($db, $ids)</code></pre>
-
+<p>
+</p>
+<h2><a name="get_rxns">get_rxns</a></h2>
+<pre>
+  $objects = $obj-&gt;get_rxns($db, $ids)</pre>
 <dl>
-
-<dt id="Parameter-and-return-types7">Parameter and return types</dt>
-<dd>
-
-
+<dt><strong><a name="parameter_and_return_types9" class="item">Parameter and return types</a></strong></dt>
 
 <pre>
 $db is a string
@@ -312,27 +313,19 @@ ReactionObject is a reference to a hash where the following keys are defined:
 	Error has a value which is a float
 rxn_comp is a reference to a list containing 2 items:
 	0: (stoic) an int
-	1: (id) an object_id</pre>
+	1: (id) an object_id</pre><dt><strong><a name="description9" class="item">Description</a></strong></dt>
 
-</dd>
-<dt id="Description7">Description</dt>
 <dd>
-
 <p>Returns a list of ReactionObjects that match supplied object_ids in a specified db</p>
-
 </dd>
 </dl>
-
-<h2 id="get_ops">get_ops</h2>
-
-<pre><code>  $objects = $obj-&gt;get_ops($db, $operator_names)</code></pre>
-
+<p>
+</p>
+<h2><a name="get_ops">get_ops</a></h2>
+<pre>
+  $objects = $obj-&gt;get_ops($db, $operator_names)</pre>
 <dl>
-
-<dt id="Parameter-and-return-types8">Parameter and return types</dt>
-<dd>
-
-
+<dt><strong><a name="parameter_and_return_types10" class="item">Parameter and return types</a></strong></dt>
 
 <pre>
 $db is a string
@@ -342,52 +335,58 @@ OperatorObject is a reference to a hash where the following keys are defined:
 	Name has a value which is a string
 	Reactions_predicted has a value which is an int
 	Reaction_ids has a value which is a reference to a list where each element is an object_id
-object_id is a string</pre>
+object_id is a string</pre><dt><strong><a name="description10" class="item">Description</a></strong></dt>
 
-</dd>
-<dt id="Description8">Description</dt>
 <dd>
-
 <p>Returns a list of OperatorObjects that match supplied operator_names in a specified db</p>
-
 </dd>
 </dl>
-
-<h2 id="get_adducts">get_adducts</h2>
-
-<pre><code>  $adducts = $obj-&gt;get_adducts()</code></pre>
-
+<p>
+</p>
+<h2><a name="get_operator">get_operator</a></h2>
+<pre>
+  $operator = $obj-&gt;get_operator($db, $operator_name)</pre>
 <dl>
+<dt><strong><a name="parameter_and_return_types11" class="item">Parameter and return types</a></strong></dt>
 
-<dt id="Parameter-and-return-types9">Parameter and return types</dt>
+<pre>
+$db is a string
+$operator_name is a string
+$operator is an OperatorObject
+OperatorObject is a reference to a hash where the following keys are defined:
+	Name has a value which is a string
+	Reactions_predicted has a value which is an int
+	Reaction_ids has a value which is a reference to a list where each element is an object_id
+object_id is a string</pre><dt><strong><a name="description11" class="item">Description</a></strong></dt>
+
 <dd>
-
-
+<p>Returns a OperatorObject with it's reaction IDs that matches supplied operator_name in a specified db</p>
+</dd>
+</dl>
+<p>
+</p>
+<h2><a name="get_adducts">get_adducts</a></h2>
+<pre>
+  $adducts = $obj-&gt;get_adducts()</pre>
+<dl>
+<dt><strong><a name="parameter_and_return_types12" class="item">Parameter and return types</a></strong></dt>
 
 <pre>
 $adducts is a reference to a list containing 2 items:
 	0: a reference to a list where each element is a string
-	1: a reference to a list where each element is a string</pre>
+	1: a reference to a list where each element is a string</pre><dt><strong><a name="description12" class="item">Description</a></strong></dt>
 
-</dd>
-<dt id="Description9">Description</dt>
 <dd>
-
 <p>Returns a tuple of lists of positive and negative mass adducts names that may be used for querying the databases</p>
-
 </dd>
 </dl>
-
-<h2 id="ms_adduct_search">ms_adduct_search</h2>
-
-<pre><code>  $ms_adduct_output = $obj-&gt;ms_adduct_search($text, $text_type, $ms_params)</code></pre>
-
+<p>
+</p>
+<h2><a name="ms_adduct_search">ms_adduct_search</a></h2>
+<pre>
+  $ms_adduct_output = $obj-&gt;ms_adduct_search($text, $text_type, $ms_params)</pre>
 <dl>
-
-<dt id="Parameter-and-return-types10">Parameter and return types</dt>
-<dd>
-
-
+<dt><strong><a name="parameter_and_return_types13" class="item">Parameter and return types</a></strong></dt>
 
 <pre>
 $text is a string
@@ -403,8 +402,54 @@ mzParams is a reference to a hash where the following keys are defined:
 	0: a float
 	1: a float	kovats has a value which is a reference to a list containing 2 items:
 	0: a float
-	1: a float
+	1: a float	ppm has a value which is a bool
+	charge has a value which is a bool
+	halogen has a value which is a bool
+bool is an int
+ms_hit is a reference to a hash where the following keys are defined:
+	peak_name has a value which is a string
+	adduct has a value which is a string
+	id has a value which is an object_id
+	formula has a value which is a string
+	MINE_id has a value which is an int
+	name has a value which is a string
+	SMILES has a value which is a string
+	Inchikey has a value which is a string
+	native_hit has a value which is a bool
+	logP has a value which is a float
+	minKovatsRI has a value which is a float
+	maxKovatsRI has a value which is a float
+	NP_likeness has a value which is a float
+object_id is a string</pre><dt><strong><a name="description13" class="item">Description</a></strong></dt>
 
+<dd>
+<p>New function replacing batch_ms_adduct_search</p>
+</dd>
+</dl>
+<p>
+</p>
+<h2><a name="ms2_search">ms2_search</a></h2>
+<pre>
+  $ms_adduct_output = $obj-&gt;ms2_search($text, $text_type, $ms_params)</pre>
+<dl>
+<dt><strong><a name="parameter_and_return_types14" class="item">Parameter and return types</a></strong></dt>
+
+<pre>
+$text is a string
+$text_type is a string
+$ms_params is a ms2Params
+$ms_adduct_output is a reference to a list where each element is a ms_hit
+ms2Params is a reference to a hash where the following keys are defined:
+	db has a value which is a string
+	tolerance has a value which is a float
+	adducts has a value which is a reference to a list where each element is a string
+	models has a value which is a reference to a list where each element is a string
+	logP has a value which is a reference to a list containing 2 items:
+	0: a float
+	1: a float	kovats has a value which is a reference to a list containing 2 items:
+	0: a float
+	1: a float	scoring_function has a value which is a string
+	energy_level has a value which is a float
 	ppm has a value which is a bool
 	charge has a value which is a bool
 	halogen has a value which is a bool
@@ -423,179 +468,164 @@ ms_hit is a reference to a hash where the following keys are defined:
 	minKovatsRI has a value which is a float
 	maxKovatsRI has a value which is a float
 	NP_likeness has a value which is a float
-object_id is a string
-</pre>
+object_id is a string</pre><dt><strong><a name="description14" class="item">Description</a></strong></dt>
 
-</dd>
-<dt id="Description10">Description</dt>
 <dd>
-
-<p>New function replacing batch_ms_adduct_search</p>
-
+<p>performs a ms adduct search but also scores hits using the supplied ms2 data</p>
 </dd>
 </dl>
-
-
-
-<h1 id="TYPES">TYPES</h1>
-
-<h2 id="bool">bool</h2>
-
+<p>
+</p>
+<h2><a name="pathway_search">pathway_search</a></h2>
+<pre>
+  $pathway_query_results = $obj-&gt;pathway_search($db, $start_comp, $end_comp, $len_limit, $all_paths)</pre>
 <dl>
+<dt><strong><a name="parameter_and_return_types15" class="item">Parameter and return types</a></strong></dt>
 
-<dt id="Description13">Description</dt>
+<pre>
+$db is a string
+$start_comp is an object_id
+$end_comp is an object_id
+$len_limit is an int
+$all_paths is a bool
+$pathway_query_results is a reference to a list where each element is a pathway
+object_id is a string
+bool is an int
+pathway is a reference to a list where each element is an object_id</pre><dt><strong><a name="description15" class="item">Description</a></strong></dt>
+
 <dd>
-
-<p>indicates true or false values, false = 0, true =1</p>
-
+<p>Creates pathway_query_results, a list of valid pathways (length one unless all_paths is true)</p>
+<p>Input parameters for the &quot;pathway_search&quot; function:
+string db - the database in which to search for pathways
+object_id start_comp - the compound to begin the search from
+        object_id end_comp - the compound that that a pathway will end with if successful
+        int len_limit - the max number of intermediate reactions permitted in a path.
+        bool all_paths - if true, the script returns all paths less that the limit not just the shortest path</p>
 </dd>
-<dt id="Definition">Definition</dt>
+</dl>
+<p>
+</p>
+<hr />
+<h1><a name="types">TYPES</a></h1>
+<p>
+</p>
+<h2><a name="bool">bool</a></h2>
+<dl>
+<dt><strong><a name="description16" class="item">Description</a></strong></dt>
+
 <dd>
-
-
+<p>indicates true or false values, false = 0, true =1</p>
+</dd>
+<dt><strong><a name="definition" class="item">Definition</a></strong></dt>
 
 <pre>
 an int
-</pre>
-
-</dd>
-</dl>
-
-<h2 id="object_id">object_id</h2>
-
+</pre></dl>
+<p>
+</p>
+<h2><a name="object_id">object_id</a></h2>
 <dl>
+<dt><strong><a name="description17" class="item">Description</a></strong></dt>
 
-<dt id="Description14">Description</dt>
 <dd>
-
-<p>Unique ID of a compound or reaction derived from a hexdigest of the sha1 hash of a unique feature. Starts with C if a compound, X if a cofactor and R if a reaction.</p>
-
+<p>Unique ID of a compound or reaction derived from a hexdigest of the sha1 hash of a unique feature.
+Starts with C if a compound, X if a cofactor and R if a reaction.</p>
 </dd>
-<dt id="Definition1">Definition</dt>
-<dd>
-
-
+<dt><strong><a name="definition2" class="item">Definition</a></strong></dt>
 
 <pre>
 a string
-</pre>
-
-</dd>
-</dl>
-
-<h2 id="comp_stub">comp_stub</h2>
-
+</pre></dl>
+<p>
+</p>
+<h2><a name="comp_stub">comp_stub</a></h2>
 <dl>
+<dt><strong><a name="description18" class="item">Description</a></strong></dt>
 
-<dt id="Description15">Description</dt>
 <dd>
-
 <p>A summery of a compound object which is returned from compound query</p>
-
-<pre><code>        object_id _id - unique ID of a compound
+<pre>
+        object_id _id - unique ID of a compound
         string MINE_id - The a unique numerical id of a compound
         list&lt;string&gt; Names - common name for the compound
-        string Formula - molecular formula of the compound</code></pre>
-
+        string Formula - molecular formula of the compound</pre>
 </dd>
-<dt id="Definition2">Definition</dt>
-<dd>
-
-
+<dt><strong><a name="definition3" class="item">Definition</a></strong></dt>
 
 <pre>
 a reference to a hash where the following keys are defined:
 id has a value which is an object_id
 MINE_id has a value which is a string
 Names has a value which is a reference to a list where each element is a string
-Formula has a value which is a string</pre>
-
-</dd>
-</dl>
-
-<h2 id="rxn_comp">rxn_comp</h2>
-
+Formula has a value which is a string</pre></dl>
+<p>
+</p>
+<h2><a name="rxn_comp">rxn_comp</a></h2>
 <dl>
+<dt><strong><a name="description19" class="item">Description</a></strong></dt>
 
-<dt id="Description16">Description</dt>
 <dd>
-
 <p>A compound that is a component of a reaction as tuple of stoichiometric coefficient and _id</p>
-
 </dd>
-<dt id="Definition3">Definition</dt>
-<dd>
-
-
+<dt><strong><a name="definition4" class="item">Definition</a></strong></dt>
 
 <pre>
 a reference to a list containing 2 items:
 0: (stoic) an int
-1: (id) an object_id</pre>
+1: (id) an object_id</pre></dl>
+<p>
+</p>
+<h2><a name="pathway">pathway</a></h2>
+<dl>
+<dt><strong><a name="description20" class="item">Description</a></strong></dt>
 
+<dd>
+<p>A list of all the compounds and reactions in a pathway</p>
 </dd>
-</dl>
-
-
+<dt><strong><a name="definition5" class="item">Definition</a></strong></dt>
 
 <pre>
 a reference to a list where each element is an object_id
-</pre>
-
-</dd>
-</dl>
-
-<h2 id="adduct_result">adduct_result</h2>
-
+</pre></dl>
+<p>
+</p>
+<h2><a name="adduct_result">adduct_result</a></h2>
 <dl>
+<dt><strong><a name="description21" class="item">Description</a></strong></dt>
 
-<dt id="Description18">Description</dt>
 <dd>
-
 <p>The result of a single adduct query on the database</p>
-
-<pre><code>        string adduct - the name of the mass adduct that returned the result
+<pre>
+        string adduct - the name of the mass adduct that returned the result
         string formula - the formula that was matched
-        list&lt;object_id&gt; isomers - a list of the isomers of the formula present in the database</code></pre>
-
+        list&lt;object_id&gt; isomers - a list of the isomers of the formula present in the database</pre>
 </dd>
-<dt id="Definition5">Definition</dt>
-<dd>
-
-
+<dt><strong><a name="definition6" class="item">Definition</a></strong></dt>
 
 <pre>
 a reference to a hash where the following keys are defined:
 adduct has a value which is a string
 formula has a value which is a string
-isomers has a value which is a reference to a list where each element is a comp_stub</pre>
-
-</dd>
-</dl>
-
-<h2 id="peak">peak</h2>
-
+isomers has a value which is a reference to a list where each element is a comp_stub</pre></dl>
+<p>
+</p>
+<h2><a name="peak">peak</a></h2>
 <dl>
+<dt><strong><a name="description22" class="item">Description</a></strong></dt>
 
-<dt id="Description19">Description</dt>
 <dd>
-
 <p>An annotated ms peak output by a batch mass adduct query</p>
-
-<pre><code>        string name - name of the peak
+<pre>
+        string name - name of the peak
         float r_time - retention time
         float mz - mass to charge ratio
         bool charge - polarity of charge
         int num_forms - number of formula hits
         int num_hits - total number of compound matches
         bool native_hit - if true, one of the compounds suggested matches an native compound from the metabolic model
-        list&lt;adduct_result&gt; adducts - the adducts that match a given peak</code></pre>
-
+        list&lt;adduct_result&gt; adducts - the adducts that match a given peak</pre>
 </dd>
-<dt id="Definition6">Definition</dt>
-<dd>
-
-
+<dt><strong><a name="definition7" class="item">Definition</a></strong></dt>
 
 <pre>
 a reference to a hash where the following keys are defined:
@@ -603,25 +633,31 @@ name has a value which is a string
 num_forms has a value which is an int
 num_hits has a value which is an int
 native_hit has a value which is a bool
-adducts has a value which is a reference to a list where each element is an adduct_result</pre>
-
-</dd>
-</dl>
-
-<h2 id="ms_hit">ms_hit</h2>
-
+adducts has a value which is a reference to a list where each element is an adduct_result</pre></dl>
+<p>
+</p>
+<h2><a name="ms_hit">ms_hit</a></h2>
 <dl>
+<dt><strong><a name="description23" class="item">Description</a></strong></dt>
 
-<dt id="Description20">Description</dt>
 <dd>
-
-<p>A putative match for a metabolomics search string peak_name string adduct object_id id string formula int MINE_id string name string SMILES string Inchikey bool native_hit - if true, hit is a member of the specified genomic reconstruction int steps_from_source - The number of transformations the hit is from a source database compound float logP - predicted partition coefficient float minKovatsRI - float maxKovatsRI - values of the predicted Kovats Retention Index float NP_likeness - the natural product likeness score of the hit</p>
-
+<p>A putative match for a metabolomics search
+string peak_name
+string adduct
+object_id id
+string formula
+int MINE_id
+string name
+string SMILES
+string Inchikey
+bool native_hit - if true, hit is a member of the specified genomic reconstruction
+int steps_from_source - The number of transformations the hit is from a source database compound
+float logP - predicted partition coefficient
+float minKovatsRI -
+float maxKovatsRI - values of the predicted Kovats Retention Index
+float NP_likeness - the natural product likeness score of the hit</p>
 </dd>
-<dt id="Definition7">Definition</dt>
-<dd>
-
-
+<dt><strong><a name="definition8" class="item">Definition</a></strong></dt>
 
 <pre>
 a reference to a hash where the following keys are defined:
@@ -637,38 +673,30 @@ native_hit has a value which is a bool
 logP has a value which is a float
 minKovatsRI has a value which is a float
 maxKovatsRI has a value which is a float
-NP_likeness has a value which is a float</pre>
-
-</dd>
-</dl>
-
-<h2 id="CompoundObject">CompoundObject</h2>
-
+NP_likeness has a value which is a float</pre></dl>
+<p>
+</p>
+<h2><a name="compoundobject">CompoundObject</a></h2>
 <dl>
+<dt><strong><a name="description24" class="item">Description</a></strong></dt>
 
-<dt id="Description21">Description</dt>
 <dd>
-
 <p>Data structures for a compound object</p>
-
-<pre><code>                Guaranteed:
+<pre>
+                Guaranteed:
                 object_id id - A hexdigest of the sha1 hash of the openbabel canonical smile
                 string InChI_Key - The first block of the InChI Key of a compound
                 string Formula - The chemical formula of the compound
         string Stringcode - The canonical SMILE string generated by openbabel
                 float Mass - The exact mass of the neutral form of a compound as calculated by openbabel
-                int Charge - The total charge of the compound as calculated by ChemAxon
-
+                int Charge - The total charge of the compound as calculated by ChemAxon</pre>
+<pre>
                 Optionally:
         list&lt;string&gt; DB_links - links to the same compound in other databases
         list&lt;object_id&gt; Reactant_in - Reactions in which the compound is a reactant
-        list&lt;object_id&gt; Product_of - Reactions in which the compound is a product</code></pre>
-
+        list&lt;object_id&gt; Product_of - Reactions in which the compound is a product</pre>
 </dd>
-<dt id="Definition8">Definition</dt>
-<dd>
-
-
+<dt><strong><a name="definition9" class="item">Definition</a></strong></dt>
 
 <pre>
 a reference to a hash where the following keys are defined:
@@ -680,35 +708,27 @@ Mass has a value which is a float
 Charge has a value which is an int
 DB_links has a value which is a reference to a list where each element is a string
 Reactant_in has a value which is a reference to a list where each element is an object_id
-Product_of has a value which is a reference to a list where each element is an object_id</pre>
-
-</dd>
-</dl>
-
-<h2 id="ReactionObject">ReactionObject</h2>
-
+Product_of has a value which is a reference to a list where each element is an object_id</pre></dl>
+<p>
+</p>
+<h2><a name="reactionobject">ReactionObject</a></h2>
 <dl>
+<dt><strong><a name="description25" class="item">Description</a></strong></dt>
 
-<dt id="Description22">Description</dt>
 <dd>
-
 <p>Data structures for a reaction object</p>
-
-<pre><code>                Guaranteed:
+<pre>
+                Guaranteed:
                 object_id id - A hexdigest of the sha1 hash of the _ids of the reactants and products in sorted order
         list&lt;string&gt; Operators - The operator used to generate a particular reaction
         rxn_comps Reactants - Reactants of the reaction as tuples
-        rxn_comps Products - Products of the reaction as tuples
-
+        rxn_comps Products - Products of the reaction as tuples</pre>
+<pre>
         Optionally:
         float Energy - Delta G of reaction calculated by group contribution theory
-        float Error - Estimated error of above energy</code></pre>
-
+        float Error - Estimated error of above energy</pre>
 </dd>
-<dt id="Definition9">Definition</dt>
-<dd>
-
-
+<dt><strong><a name="definition10" class="item">Definition</a></strong></dt>
 
 <pre>
 a reference to a hash where the following keys are defined:
@@ -717,60 +737,54 @@ Operators has a value which is a reference to a list where each element is a str
 Reactants has a value which is a reference to a list where each element is a rxn_comp
 Products has a value which is a reference to a list where each element is a rxn_comp
 Energy has a value which is a float
-Error has a value which is a float</pre>
-
-</dd>
-</dl>
-
-<h2 id="OperatorObject">OperatorObject</h2>
-
+Error has a value which is a float</pre></dl>
+<p>
+</p>
+<h2><a name="operatorobject">OperatorObject</a></h2>
 <dl>
+<dt><strong><a name="description26" class="item">Description</a></strong></dt>
 
-<dt id="Description23">Description</dt>
 <dd>
-
 <p>Data structures for a operator object</p>
-
-<pre><code>                Guaranteed:
+<pre>
+                Guaranteed:
                 string Name - Name of the operator
                 int Reactions_predicted - The number of database reactions predicted by the operator
-                list&lt;object_id&gt; Reaction_ids - A list of the _id hashes for the reaction
-
+                list&lt;object_id&gt; Reaction_ids - A list of the _id hashes for the reaction</pre>
+<pre>
         Optionally:
         float Specificity - The fraction of predicted reactions which match known reactions
-        float Avg_delta_G - The Average Delta G of all predicted reactions</code></pre>
-
+        float Avg_delta_G - The Average Delta G of all predicted reactions</pre>
 </dd>
-<dt id="Definition10">Definition</dt>
-<dd>
-
-
+<dt><strong><a name="definition11" class="item">Definition</a></strong></dt>
 
 <pre>
 a reference to a hash where the following keys are defined:
 Name has a value which is a string
 Reactions_predicted has a value which is an int
-Reaction_ids has a value which is a reference to a list where each element is an object_id</pre>
-
-</dd>
-</dl>
-
-<h2 id="mzParams">mzParams</h2>
-
+Reaction_ids has a value which is a reference to a list where each element is an object_id</pre></dl>
+<p>
+</p>
+<h2><a name="mzparams">mzParams</a></h2>
 <dl>
+<dt><strong><a name="description27" class="item">Description</a></strong></dt>
 
-<dt id="Description24">Description</dt>
 <dd>
-
 <p>Parameters for the ms adduct search function:</p>
-
-<p>Input parameters for the &quot;mass_adduct_query&quot; function: string db - the database in which to search for M/S matches float tolerance - the desired mass precision list&lt;string&gt; adduct_list - the adducts to consider in the query. list&lt;string&gt; models - the models in SEED that will be considered native metabolites(can be empty) tuple&lt;float,float&gt; logP - a tuple specifying the minimum and maximum values of logP values tuple&lt;float,float&gt; kovats - a tuple specifying the minimum and maximum values of Kovats RI bool ppm - if true, precision is supplied in parts per million. Else, precision is in Daltons bool charge - the polarity for molecules if not specified in file. 1 = +, 0 = - bool halogens - if false, compounds containing Cl, Br, and F will be excluded from results string parent_filter - require all results originate from compounds in this specified metabolic model string reaction_filter - require all results originate from operators which map to reactions in this specified metabolic model</p>
-
+<p>Input parameters for the &quot;mass_adduct_query&quot; function:
+string db - the database in which to search for M/S matches
+        float tolerance - the desired mass precision
+        list&lt;string&gt; adduct_list - the adducts to consider in the query.
+        list&lt;string&gt; models - the models in SEED that will be considered native metabolites(can be empty)
+        tuple&lt;float,float&gt; logP - a tuple specifying the minimum and maximum values of logP values
+        tuple&lt;float,float&gt; kovats - a tuple specifying the minimum and maximum values of Kovats RI
+        bool ppm - if true, precision is supplied in parts per million. Else, precision is in Daltons
+        bool charge - the polarity for molecules if not specified in file. 1 = +, 0 = -
+        bool halogens - if false, compounds containing Cl, Br, and F will be excluded from results
+        string parent_filter - require all results originate from compounds in this specified metabolic model
+string reaction_filter - require all results originate from operators which map to reactions in this specified metabolic model</p>
 </dd>
-<dt id="Definition11">Definition</dt>
-<dd>
-
-
+<dt><strong><a name="definition12" class="item">Definition</a></strong></dt>
 
 <pre>
 a reference to a hash where the following keys are defined:
@@ -784,13 +798,48 @@ logP has a value which is a reference to a list containing 2 items:
 0: a float
 1: a floatppm has a value which is a bool
 charge has a value which is a bool
-halogen has a value which is a bool</pre>
+halogen has a value which is a bool</pre></dl>
+<p>
+</p>
+<h2><a name="ms2params">ms2Params</a></h2>
+<dl>
+<dt><strong><a name="description28" class="item">Description</a></strong></dt>
 
+<dd>
+<p>Parameters for the ms2 adduct search function:</p>
+<p>Input parameters for the &quot;mass_adduct_query&quot; function:
+string db - the database in which to search for M/S matches
+        float tolerance - the desired mass precision
+        list&lt;string&gt; adduct_list - the adducts to consider in the query.
+        list&lt;string&gt; models - the models in SEED that will be considered native metabolites(can be empty)
+        tuple&lt;float,float&gt; logP - a tuple specifying the minimum and maximum values of logP values
+        tuple&lt;float,float&gt; kovats - a tuple specifying the minimum and maximum values of Kovats RI
+        string scoring_function - The name of the scoring function which will be used to score the spectra
+        float energy_level - an integer from 0-2 specifying the fragmentation energy of the predicted spectra
+        bool ppm - if true, precision is supplied in parts per million. Else, precision is in Daltons
+        bool charge - the polarity for molecules if not specified in file. 1 = +, 0 = -
+        bool halogens - if false, compounds containing Cl, Br, and F will be excluded from results
+        string parent_filter - require all results originate from compounds in this specified metabolic model
+string reaction_filter - require all results originate from operators which map to reactions in this specified metabolic model</p>
 </dd>
-</dl>
+<dt><strong><a name="definition13" class="item">Definition</a></strong></dt>
 
+<pre>
+a reference to a hash where the following keys are defined:
+db has a value which is a string
+tolerance has a value which is a float
+adducts has a value which is a reference to a list where each element is a string
+models has a value which is a reference to a list where each element is a string
+logP has a value which is a reference to a list containing 2 items:
+0: a float
+1: a floatkovats has a value which is a reference to a list containing 2 items:
+0: a float
+1: a floatscoring_function has a value which is a string
+energy_level has a value which is a float
+ppm has a value which is a bool
+charge has a value which is a bool
+halogen has a value which is a bool</pre></dl>
 
 </body>
 
 </html>
-

@@ -54,8 +54,8 @@ def _read_rcfile(file=_os.environ['HOME'] + '/.authrc'):  # @ReservedAssignment
                 authdata = {x: rawdata.get(x) for x in (
                     'user_id', 'token', 'client_secret', 'keyfile',
                     'keyfile_passphrase', 'password')}
-        except Exception, e:
-            print "Error while reading authrc file %s: %s" % (file, e)
+        except Exception as e:
+            print("Error while reading authrc file %s: %s" % (file, e))
     return authdata
 
 
@@ -74,8 +74,8 @@ def _read_inifile(file=_os.environ.get(  # @ReservedAssignment
                         else None for x in ('user_id', 'token',
                                             'client_secret', 'keyfile',
                                             'keyfile_passphrase', 'password')}
-        except Exception, e:
-            print "Error while reading INI file %s: %s" % (file, e)
+        except Exception as e:
+            print("Error while reading INI file %s: %s" % (file, e))
     return authdata
 
 
@@ -195,6 +195,11 @@ class mineDatabaseServices(object):
                           [db, mongo_query, parent_filter, reaction_filter])
         return resp[0]
 
+    def get_ids(self, db, collection, query):
+        resp = self._call('mineDatabaseServices.get_ids',
+                          [db, collection, query])
+        return resp[0]
+
     def get_comps(self, db, ids):
         resp = self._call('mineDatabaseServices.get_comps',
                           [db, ids])
@@ -208,6 +213,11 @@ class mineDatabaseServices(object):
     def get_ops(self, db, operator_names):
         resp = self._call('mineDatabaseServices.get_ops',
                           [db, operator_names])
+        return resp[0]
+
+    def get_operator(self, db, operator_name):
+        resp = self._call('mineDatabaseServices.get_operator',
+                          [db, operator_name])
         return resp[0]
 
     def get_adducts(self):
